@@ -13,5 +13,9 @@ namespace CNSBack.Models
         public DateTime birthdate { get; set; }
         
         public int roleid { get; set; }
+        
+        public string login { get; set; }
+
+        public string password { get; set; }
     }
 }

@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ILoginService, LoginService>();
+builder.Services.AddScoped<INewsManageService, NewsManageService>();
 
 var app = builder.Build();
 

@@ -15,11 +15,11 @@ namespace CNSBack.Controllers
         
         [HttpGet]
         [Route("api/employeeManage/employeeReg")]
-        public IActionResult EmployeeReg(string firstName, string lastName, int positionId, DateTime birthDate, int roleId)
+        public IActionResult EmployeeReg(string firstName, string lastName, int positionId, DateTime birthDate, int roleId, string login, string password)
         {
             try
             {
-                _loginService.EmployeeReg(firstName, lastName, positionId, birthDate, roleId);
+                _loginService.EmployeeReg(firstName, lastName, positionId, birthDate, roleId, login, password);
                 return Ok();
             }
             catch (UserAlreadyExistsException ex)
